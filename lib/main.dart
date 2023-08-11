@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 
-import 'features/onboarding/presentation/views/splash_view.dart';
+import 'package:flutter/material.dart';
+import 'package:nike_app/core/utils/app_router.dart';
 
 void main() {
   runApp(const NikeApp());
@@ -11,9 +11,9 @@ class NikeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      home: SplashView(),
     );
   }
 }

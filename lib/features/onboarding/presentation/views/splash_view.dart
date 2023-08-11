@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:nike_app/core/utils/app_colors.dart';
-
 import 'widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
