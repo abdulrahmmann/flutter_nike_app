@@ -20,9 +20,9 @@ class CustomButton extends GetView<OnboardingControllerImplementation> {
     return GestureDetector(
       onTap: () {
         controller.next();
-        // if (controller.currentPage == onboardingList.length) {
-        //   GoRouter.of(context).push(AppRouter.kSignInView);
-        // }
+        if (controller.currentPage == onboardingList.length) {
+          GoRouter.of(context).push(AppRouter.kSignInView);
+        }
       },
       child: Container(
         padding: const EdgeInsets.all(16),

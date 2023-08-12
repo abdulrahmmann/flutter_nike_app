@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:nike_app/core/utils/app_colors.dart';
 import 'package:nike_app/core/utils/app_fonts.dart';
 
 class AppStyles {
