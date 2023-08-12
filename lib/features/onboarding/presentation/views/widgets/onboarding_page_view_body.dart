@@ -4,7 +4,7 @@ import 'package:nike_app/core/utils/app_colors.dart';
 import 'package:nike_app/core/utils/app_styles.dart';
 import 'package:nike_app/features/onboarding/data/controller/onboarding_controller.dart';
 import 'package:nike_app/features/onboarding/data/static/onboarding_static_list_data.dart';
-import 'custom_button.dart';
+import 'custom_next_button.dart';
 import 'page_view_controller.dart';
 
 class OnBoardingPageViewBody extends GetView<OnboardingControllerImplementation> {
@@ -55,7 +55,9 @@ class OnBoardingPageViewBody extends GetView<OnboardingControllerImplementation>
                         SizedBox(height: height * 0.018),
                         Text(
                           onboardingList[i].content!,
-                          style: AppStyles.textStyle16,
+                          style: AppStyles.textStyle16.copyWith(
+                            color: AppColors.kGreyContentColor1
+                          ),
                           textAlign: TextAlign.center,
                         ),
                       ],

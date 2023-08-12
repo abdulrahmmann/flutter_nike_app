@@ -20,8 +20,6 @@ class AppStyles {
 
   static const textStyle16 = TextStyle(
       fontSize: 16,
-      fontFamily: AppFonts.kPoppins,
-      fontWeight: FontWeight.w400
   );
 
 }
