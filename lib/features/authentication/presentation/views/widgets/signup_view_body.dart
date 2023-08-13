@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:nike_app/core/utils/app_colors.dart';
-import 'package:nike_app/core/utils/app_router.dart';
 import 'package:nike_app/core/utils/app_styles.dart';
 import 'package:nike_app/features/authentication/presentation/views/widgets/custom_text_field.dart';
 
@@ -9,8 +8,8 @@ import 'back_stack_arrow.dart';
 import 'custom_auth_button.dart';
 import 'custom_google_button.dart';
 
-class SignInViewBody extends StatelessWidget {
-  const SignInViewBody({super.key});
+class SignUpViewBody extends StatelessWidget {
+  const SignUpViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +34,7 @@ class SignInViewBody extends StatelessWidget {
                 child: Column(
                   children: [
                     const Text(
-                      'Hello Again!',
+                      'Register Account',
                       style: TextStyle(
                           fontSize: 32,
                           fontFamily: 'Raleway',
@@ -63,15 +62,25 @@ class SignInViewBody extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
 
-                  Text('Email Address',
+                  Text(
+                      'Your Name',
                       style: AppStyles.textStyle16.copyWith(
                           fontFamily: 'Raleway',
                           color: AppColors.kGBlackColor1,
                           fontWeight: FontWeight.w500)),
                   const SizedBox(height: 12),
                   const CustomTextField(),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 15),
 
+                  Text(
+                      'Email Address',
+                      style: AppStyles.textStyle16.copyWith(
+                          fontFamily: 'Raleway',
+                          color: AppColors.kGBlackColor1,
+                          fontWeight: FontWeight.w500)),
+                  const SizedBox(height: 12),
+                  const CustomTextField(),
+                  const SizedBox(height: 15),
 
                   Text('Password',
                       style: AppStyles.textStyle16.copyWith(
@@ -80,63 +89,38 @@ class SignInViewBody extends StatelessWidget {
                           fontWeight: FontWeight.w500)),
                   const SizedBox(height: 12),
                   const CustomTextField(isPassword: true),
-                  const SizedBox(height: 12),
-
-                  SizedBox(
-                    width: double.infinity,
-                    child: GestureDetector(
-                      onTap: () {
-                        GoRouter.of(context).push(AppRouter.kForgotPasswordView);
-                      },
-                      child: const Text(
-                        'Recovery Password',
-                        style: TextStyle(
-                            fontSize: 12,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            color: AppColors.kGreyColor3),
-                        textAlign: TextAlign.end,
-                      ),
-                    ),
-                  ),
 
                   const SizedBox(height: 24),
 
                   const CustomAuthenticationButton(
                     textColor: Colors.white,
                     backgroundColor: AppColors.kBlueColor,
-                    text: 'Sign In',
+                    text: 'Sign Up',
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: height*.025),
                   const CustomGoogleButton(),
-                  SizedBox(height: height*.095),
-                  Row(
+                  SizedBox(height: height*.025),
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        'New User?',
+                      Text(
+                        'Already Have Account?',
                         style: TextStyle(
-                          fontSize: 14,
-                          fontFamily: 'Raleway',
-                          fontWeight: FontWeight.w500,
-                          color: AppColors.kTextColorGrey
+                            fontSize: 14,
+                            fontFamily: 'Raleway',
+                            fontWeight: FontWeight.w500,
+                            color: AppColors.kTextColorGrey
                         ),
                       ),
-
-                       GestureDetector(
-                         onTap: () {
-                           GoRouter.of(context).push(AppRouter.kOTPVerificationView);
-                         },
-                         child: const Text(
-                            ' Create Account',
-                            style: TextStyle(
-                                fontSize: 14,
-                                fontFamily: 'Raleway',
-                                fontWeight: FontWeight.w700,
-                                color: AppColors.kGBlackColor2
-                            ),
-                          ),
-                       ),
+                      Text(
+                        ' Sign in',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'Raleway',
+                            fontWeight: FontWeight.w700,
+                            color: AppColors.kGBlackColor2
+                        ),
+                      )
                     ],
                   )
 

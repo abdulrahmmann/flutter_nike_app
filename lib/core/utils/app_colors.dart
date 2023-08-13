@@ -19,6 +19,8 @@ class AppColors {
 
   static const kGreyColor3 = Color(0xff707B81);
 
+  static const kGreyColor4 = Color(0xff7D848D);
+
   static const kTextColorGrey = Color(0xff6A6A6A);
 
 }
